@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "build": "Creare",
+    "marketplace": "Magazin",
+    "settings": "Setări",
+    "brand": "Whatever"
+  },
+  "home": {
+    "welcome": "Bun venit",
+    "welcomeUser": "Bun venit, {name}!",
+    "subtitle": "Super-aplicația ta personală. Creează mini-aplicații sau folosește modulele de mai jos.",
+    "myApps": "Mini-aplicațiile tale",
+    "getStarted": "Începe",
+    "buildTitle": "Creare",
+    "buildDesc": "Creează-ți propria mini-aplicație",
+    "marketplaceTitle": "Magazin",
+    "marketplaceDesc": "Răsfoiește șabloane",
+    "modules": "Module",
+    "comingSoon": "În curând",
+    "moduleNames": {
+      "banking": "Servicii bancare",
+      "messenger": "Mesagerie",
+      "videos": "Videoclipuri",
+      "food": "Mâncare",
+      "health": "Sănătate",
+      "accounting": "Contabilitate",
+      "work": "Muncă",
+      "books": "Cărți",
+      "travel": "Călătorii",
+      "reminder": "Memento",
+      "investing": "Investiții",
+      "games": "Jocuri",
+      "translator": "Traducător"
+    }
+  },
+  "build": {
+    "title": "Crează o mini-aplicație",
+    "stepBasics": "Informații de bază",
+    "stepData": "Date",
+    "stepPublish": "Publicare",
+    "name": "Nume",
+    "namePlaceholder": "Tracker-ul meu de cheltuieli",
+    "icon": "Pictogramă (emoji)",
+    "description": "Descriere",
+    "descriptionPlaceholder": "Urmărește-ți cheltuielile...",
+    "tableInstruction": "Adaugă cel puțin un tabel cu câmpuri. În MVP se folosește primul tabel.",
+    "tableName": "Numele tabelului",
+    "tableNamePlaceholder": "Cheltuieli",
+    "fields": "Câmpuri",
+    "fieldNamePlaceholder": "sumă",
+    "typeText": "Text",
+    "typeNumber": "Număr",
+    "typeBoolean": "Boolean",
+    "typeDate": "Dată",
+    "addFieldBtn": "Adaugă",
+    "addTableBtn": "Adaugă tabel",
+    "tableAdded": "Tabelul \"{name}\" a fost adăugat",
+    "publishDesc": "Vei obține: pagina listă, formularul și detaliile înregistrării. Gata de publicare?",
+    "publishBtn": "Publică și pornește",
+    "back": "← Înapoi",
+    "next": "Înainte →"
+  },
+  "marketplace": {
+    "title": "Magazin",
+    "subtitle": "Începe dintr-un șablon. Instalare cu o singură atingere.",
+    "install": "Instalează",
+    "comingSoon": "În curând",
+    "comingSoonAlert": "Acest șablon va fi disponibil în curând! Încearcă Tracker-ul de cheltuieli sau Tracker-ul de obiceiuri.",
+    "templates": {
+      "expense": {
+        "name": "Tracker cheltuieli",
+        "desc": "Urmărește cheltuielile zilnice"
+      },
+      "habit": {
+        "name": "Tracker obiceiuri",
+        "desc": "Urmărește obiceiurile și seriile"
+      },
+      "books": {
+        "name": "Note despre cărți",
+        "desc": "Note și rezumate AI"
+      },
+      "travel": {
+        "name": "Planificator de călătorii",
+        "desc": "Planifică-ți călătoriile"
+      },
+      "translator": {
+        "name": "Traducător",
+        "desc": "Ghid de conversație și traducere"
+      },
+      "inbox": {
+        "name": "Asistent inbox",
+        "desc": "Memento-uri și triere"
+      }
+    }
+  },
+  "settings": {
+    "title": "Setări",
+    "profile": "Profil",
+    "name": "Nume",
+    "save": "Salvează",
+    "aiProviders": "Furnizori AI",
+    "aiProvidersDesc": "Adaugă cheia ta API OpenAI sau Anthropic pentru a activa acțiunile AI în mini-aplicații. Cheile sunt stocate local și nu sunt trimise niciodată pe serverele noastre.",
+    "apiKeyPlaceholder": "sk-...",
+    "saveKey": "Salvează cheia",
+    "keySaved": "Cheie salvată.",
+    "integrations": "Integrări",
+    "integrationsDesc": "Calendar, Conector HTTP — în curând.",
+    "language": "Limbă",
+    "languageDesc": "Alege limba preferată. Modificările intră în vigoare imediat."
+  },
+  "run": {
+    "home": "← Acasă",
+    "notFound": "Mini-aplicația nu a fost găsită.",
+    "backHome": "← Înapoi acasă",
+    "noRecord": "Nicio înregistrare",
+    "chatHint": "Chat cu AI (adaugă cheia LLM în Setări)",
+    "selectPlaceholder": "Selectează..."
+  },
+  "common": {
+    "save": "Salvează",
+    "add": "Adaugă",
+    "back": "Înapoi",
+    "next": "Înainte",
+    "cancel": "Anulează",
+    "delete": "Șterge",
+    "edit": "Editează",
+    "loading": "Se încarcă...",
+    "error": "Ceva a mers greșit."
+  }
+}

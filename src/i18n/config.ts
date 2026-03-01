@@ -1,0 +1,11 @@
+export const LOCALES = ['en', 'uk', 'ro'] as const;
+export type Locale = typeof LOCALES[number];
+export const DEFAULT_LOCALE: Locale = 'en';
+
+export const LOCALE_LABELS: Record<Locale, string> = {
+  en: 'English',
+  uk: 'Українська',
+  ro: 'Română',
+};
+
+export const LOCALE_STORAGE_KEY = 'whatever_locale';

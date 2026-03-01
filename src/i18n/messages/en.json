@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Home",
+    "build": "Build",
+    "marketplace": "Marketplace",
+    "settings": "Settings",
+    "brand": "Whatever"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "welcomeUser": "Welcome, {name}!",
+    "subtitle": "Your personal super app. Build mini-apps or use the modules below.",
+    "myApps": "Your Mini-Apps",
+    "getStarted": "Get Started",
+    "buildTitle": "Build",
+    "buildDesc": "Create your own mini-app",
+    "marketplaceTitle": "Marketplace",
+    "marketplaceDesc": "Browse templates",
+    "modules": "Modules",
+    "comingSoon": "Coming soon",
+    "moduleNames": {
+      "banking": "Banking",
+      "messenger": "Messenger",
+      "videos": "Videos",
+      "food": "Food",
+      "health": "Health",
+      "accounting": "Accounting",
+      "work": "Work",
+      "books": "Books",
+      "travel": "Travel",
+      "reminder": "Reminder",
+      "investing": "Investing",
+      "games": "Games",
+      "translator": "Translator"
+    }
+  },
+  "build": {
+    "title": "Build a Mini-App",
+    "stepBasics": "Basics",
+    "stepData": "Data",
+    "stepPublish": "Publish",
+    "name": "Name",
+    "namePlaceholder": "My Expense Tracker",
+    "icon": "Icon (emoji)",
+    "description": "Description",
+    "descriptionPlaceholder": "Track your expenses...",
+    "tableInstruction": "Add at least one table with fields. For MVP we use the first table.",
+    "tableName": "Table name",
+    "tableNamePlaceholder": "Expenses",
+    "fields": "Fields",
+    "fieldNamePlaceholder": "amount",
+    "typeText": "Text",
+    "typeNumber": "Number",
+    "typeBoolean": "Boolean",
+    "typeDate": "Date",
+    "addFieldBtn": "Add",
+    "addTableBtn": "Add Table",
+    "tableAdded": "Table \"{name}\" added",
+    "publishDesc": "You'll get: List page, Form page, Detail page. Ready to publish?",
+    "publishBtn": "Publish & Run",
+    "back": "← Back",
+    "next": "Next →"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "subtitle": "Start from a template. One tap to install.",
+    "install": "Install",
+    "comingSoon": "Coming soon",
+    "comingSoonAlert": "This template is coming soon! Try Expense Tracker or Habit Tracker.",
+    "templates": {
+      "expense": {
+        "name": "Expense Tracker",
+        "desc": "Track daily expenses"
+      },
+      "habit": {
+        "name": "Habit Tracker",
+        "desc": "Track habits and streaks"
+      },
+      "books": {
+        "name": "Book Notes",
+        "desc": "Notes and AI summaries"
+      },
+      "travel": {
+        "name": "Travel Planner",
+        "desc": "Plan trips"
+      },
+      "translator": {
+        "name": "Translator",
+        "desc": "Phrasebook + translate"
+      },
+      "inbox": {
+        "name": "Inbox Assistant",
+        "desc": "Reminders + triage"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "name": "Name",
+    "save": "Save",
+    "aiProviders": "AI Providers",
+    "aiProvidersDesc": "Add your OpenAI or Anthropic API key to enable AI actions in mini-apps. Keys are stored locally and never sent to our servers.",
+    "apiKeyPlaceholder": "sk-...",
+    "saveKey": "Save Key",
+    "keySaved": "Key saved.",
+    "integrations": "Integrations",
+    "integrationsDesc": "Calendar, HTTP Connector — coming soon.",
+    "language": "Language",
+    "languageDesc": "Choose your preferred language. Changes take effect immediately."
+  },
+  "run": {
+    "home": "← Home",
+    "notFound": "Mini-app not found.",
+    "backHome": "← Back to Home",
+    "noRecord": "No record",
+    "chatHint": "Chat with AI (connect your LLM key in Settings)",
+    "selectPlaceholder": "Select..."
+  },
+  "common": {
+    "save": "Save",
+    "add": "Add",
+    "back": "Back",
+    "next": "Next",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Something went wrong."
+  }
+}
