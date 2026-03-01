@@ -20,10 +20,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci --omit=dev
+        run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Prune dev dependencies
+        run: npm prune --omit=dev
 
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.1
