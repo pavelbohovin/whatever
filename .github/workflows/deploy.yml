@@ -43,4 +43,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: pm2 restart whatever
+          script: /usr/bin/env bash -i -c 'pm2 restart whatever'

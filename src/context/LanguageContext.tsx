@@ -8,11 +8,17 @@ import { resolveStartupLocale, persistLocale } from '@/i18n/getLocale';
 import enMessages from '@/i18n/messages/en.json';
 import ukMessages from '@/i18n/messages/uk.json';
 import roMessages from '@/i18n/messages/ro.json';
+import plMessages from '@/i18n/messages/pl.json';
+import deMessages from '@/i18n/messages/de.json';
+import frMessages from '@/i18n/messages/fr.json';
 
 const MESSAGES: Record<Locale, Record<string, unknown>> = {
   en: enMessages,
   uk: ukMessages,
   ro: roMessages,
+  pl: plMessages,
+  de: deMessages,
+  fr: frMessages,
 };
 
 interface LanguageContextValue {
