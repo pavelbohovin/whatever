@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "build": "Buduj",
+    "marketplace": "Rynek",
+    "settings": "Ustawienia",
+    "brand": "Whatever"
+  },
+  "home": {
+    "welcome": "Witaj",
+    "welcomeUser": "Witaj, {name}!",
+    "subtitle": "Twoja osobista super aplikacja. Twórz mini-aplikacje lub korzystaj z poniższych modułów.",
+    "myApps": "Twoje mini-aplikacje",
+    "getStarted": "Rozpocznij",
+    "buildTitle": "Buduj",
+    "buildDesc": "Utwórz własną mini-aplikację",
+    "marketplaceTitle": "Rynek",
+    "marketplaceDesc": "Przeglądaj szablony",
+    "modules": "Moduły",
+    "comingSoon": "Wkrótce",
+    "moduleNames": {
+      "banking": "Bankowość",
+      "messenger": "Komunikator",
+      "videos": "Wideo",
+      "food": "Jedzenie",
+      "health": "Zdrowie",
+      "accounting": "Księgowość",
+      "work": "Praca",
+      "books": "Książki",
+      "travel": "Podróże",
+      "reminder": "Przypomnienie",
+      "investing": "Inwestycje",
+      "games": "Gry",
+      "translator": "Tłumacz"
+    }
+  },
+  "build": {
+    "title": "Utwórz mini-aplikację",
+    "stepBasics": "Podstawy",
+    "stepData": "Dane",
+    "stepPublish": "Publikuj",
+    "name": "Nazwa",
+    "namePlaceholder": "Mój tracker wydatków",
+    "icon": "Ikona (emoji)",
+    "description": "Opis",
+    "descriptionPlaceholder": "Śledź swoje wydatki...",
+    "tableInstruction": "Dodaj co najmniej jedną tabelę z polami. W MVP używamy pierwszej tabeli.",
+    "tableName": "Nazwa tabeli",
+    "tableNamePlaceholder": "Wydatki",
+    "fields": "Pola",
+    "fieldNamePlaceholder": "kwota",
+    "typeText": "Tekst",
+    "typeNumber": "Liczba",
+    "typeBoolean": "Wartość logiczna",
+    "typeDate": "Data",
+    "addFieldBtn": "Dodaj",
+    "addTableBtn": "Dodaj tabelę",
+    "tableAdded": "Tabela \"{name}\" dodana",
+    "publishDesc": "Otrzymasz: Stronę listy, Formularz, Stronę szczegółów. Gotowy do publikacji?",
+    "publishBtn": "Publikuj i uruchom",
+    "back": "← Wstecz",
+    "next": "Dalej →"
+  },
+  "marketplace": {
+    "title": "Rynek",
+    "subtitle": "Zacznij od szablonu. Jedno kliknięcie, aby zainstalować.",
+    "install": "Zainstaluj",
+    "comingSoon": "Wkrótce",
+    "comingSoonAlert": "Ten szablon wkrótce dostępny! Wypróbuj Tracker wydatków lub Tracker nawyków.",
+    "templates": {
+      "expense": {
+        "name": "Tracker wydatków",
+        "desc": "Śledź codzienne wydatki"
+      },
+      "habit": {
+        "name": "Tracker nawyków",
+        "desc": "Śledź nawyki i serie"
+      },
+      "books": {
+        "name": "Notatki z książek",
+        "desc": "Notatki i streszczenia AI"
+      },
+      "travel": {
+        "name": "Planer podróży",
+        "desc": "Planuj wyjazdy"
+      },
+      "translator": {
+        "name": "Tłumacz",
+        "desc": "Rozmówki + tłumaczenie"
+      },
+      "inbox": {
+        "name": "Asystent skrzynki",
+        "desc": "Przypomnienia + sortowanie"
+      }
+    }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "profile": "Profil",
+    "name": "Nazwa",
+    "save": "Zapisz",
+    "aiProviders": "Dostawcy AI",
+    "aiProvidersDesc": "Dodaj klucz API OpenAI lub Anthropic, aby włączyć działania AI w mini-aplikacjach. Klucze są przechowywane lokalnie i nigdy nie są wysyłane na nasze serwery.",
+    "apiKeyPlaceholder": "sk-...",
+    "saveKey": "Zapisz klucz",
+    "keySaved": "Klucz zapisany.",
+    "integrations": "Integracje",
+    "integrationsDesc": "Kalendarz, Konektor HTTP — wkrótce.",
+    "language": "Język",
+    "languageDesc": "Wybierz preferowany język. Zmiany są natychmiast widoczne."
+  },
+  "run": {
+    "home": "← Strona główna",
+    "notFound": "Mini-aplikacja nie znaleziona.",
+    "backHome": "← Wróć do strony głównej",
+    "noRecord": "Brak rekordu",
+    "chatHint": "Czat z AI (podłącz klucz LLM w Ustawieniach)",
+    "selectPlaceholder": "Wybierz..."
+  },
+  "common": {
+    "save": "Zapisz",
+    "add": "Dodaj",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "loading": "Ładowanie...",
+    "error": "Coś poszło nie tak."
+  }
+}

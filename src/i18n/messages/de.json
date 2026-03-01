@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "build": "Erstellen",
+    "marketplace": "Marktplatz",
+    "settings": "Einstellungen",
+    "brand": "Whatever"
+  },
+  "home": {
+    "welcome": "Willkommen",
+    "welcomeUser": "Willkommen, {name}!",
+    "subtitle": "Deine persönliche Super-App. Erstelle Mini-Apps oder nutze die Module unten.",
+    "myApps": "Deine Mini-Apps",
+    "getStarted": "Loslegen",
+    "buildTitle": "Erstellen",
+    "buildDesc": "Erstelle deine eigene Mini-App",
+    "marketplaceTitle": "Marktplatz",
+    "marketplaceDesc": "Vorlagen durchsuchen",
+    "modules": "Module",
+    "comingSoon": "Demnächst",
+    "moduleNames": {
+      "banking": "Banking",
+      "messenger": "Messenger",
+      "videos": "Videos",
+      "food": "Essen",
+      "health": "Gesundheit",
+      "accounting": "Buchhaltung",
+      "work": "Arbeit",
+      "books": "Bücher",
+      "travel": "Reisen",
+      "reminder": "Erinnerung",
+      "investing": "Investieren",
+      "games": "Spiele",
+      "translator": "Übersetzer"
+    }
+  },
+  "build": {
+    "title": "Mini-App erstellen",
+    "stepBasics": "Grundlagen",
+    "stepData": "Daten",
+    "stepPublish": "Veröffentlichen",
+    "name": "Name",
+    "namePlaceholder": "Mein Ausgaben-Tracker",
+    "icon": "Symbol (Emoji)",
+    "description": "Beschreibung",
+    "descriptionPlaceholder": "Deine Ausgaben verfolgen...",
+    "tableInstruction": "Füge mindestens eine Tabelle mit Feldern hinzu. Für MVP verwenden wir die erste Tabelle.",
+    "tableName": "Tabellenname",
+    "tableNamePlaceholder": "Ausgaben",
+    "fields": "Felder",
+    "fieldNamePlaceholder": "Betrag",
+    "typeText": "Text",
+    "typeNumber": "Zahl",
+    "typeBoolean": "Wahrheitswert",
+    "typeDate": "Datum",
+    "addFieldBtn": "Hinzufügen",
+    "addTableBtn": "Tabelle hinzufügen",
+    "tableAdded": "Tabelle \"{name}\" hinzugefügt",
+    "publishDesc": "Du erhältst: Listenseite, Formularseite, Detailseite. Bereit zum Veröffentlichen?",
+    "publishBtn": "Veröffentlichen & Starten",
+    "back": "← Zurück",
+    "next": "Weiter →"
+  },
+  "marketplace": {
+    "title": "Marktplatz",
+    "subtitle": "Mit einer Vorlage starten. Ein Tipp zum Installieren.",
+    "install": "Installieren",
+    "comingSoon": "Demnächst",
+    "comingSoonAlert": "Diese Vorlage kommt bald! Probiere Ausgaben-Tracker oder Gewohnheits-Tracker.",
+    "templates": {
+      "expense": {
+        "name": "Ausgaben-Tracker",
+        "desc": "Tägliche Ausgaben verfolgen"
+      },
+      "habit": {
+        "name": "Gewohnheits-Tracker",
+        "desc": "Gewohnheiten und Serien verfolgen"
+      },
+      "books": {
+        "name": "Buchnotizen",
+        "desc": "Notizen und KI-Zusammenfassungen"
+      },
+      "travel": {
+        "name": "Reiseplaner",
+        "desc": "Reisen planen"
+      },
+      "translator": {
+        "name": "Übersetzer",
+        "desc": "Sprachführer + Übersetzen"
+      },
+      "inbox": {
+        "name": "Posteingang-Assistent",
+        "desc": "Erinnerungen + Sortierung"
+      }
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "profile": "Profil",
+    "name": "Name",
+    "save": "Speichern",
+    "aiProviders": "KI-Anbieter",
+    "aiProvidersDesc": "Füge deinen OpenAI- oder Anthropic-API-Schlüssel hinzu, um KI-Aktionen in Mini-Apps zu aktivieren. Schlüssel werden lokal gespeichert und nie an unsere Server gesendet.",
+    "apiKeyPlaceholder": "sk-...",
+    "saveKey": "Schlüssel speichern",
+    "keySaved": "Schlüssel gespeichert.",
+    "integrations": "Integrationen",
+    "integrationsDesc": "Kalender, HTTP-Konnektor — demnächst.",
+    "language": "Sprache",
+    "languageDesc": "Wähle deine bevorzugte Sprache. Änderungen werden sofort wirksam."
+  },
+  "run": {
+    "home": "← Startseite",
+    "notFound": "Mini-App nicht gefunden.",
+    "backHome": "← Zurück zur Startseite",
+    "noRecord": "Kein Eintrag",
+    "chatHint": "Mit KI chatten (verbinde deinen LLM-Schlüssel in den Einstellungen)",
+    "selectPlaceholder": "Auswählen..."
+  },
+  "common": {
+    "save": "Speichern",
+    "add": "Hinzufügen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "loading": "Laden...",
+    "error": "Etwas ist schiefgelaufen."
+  }
+}

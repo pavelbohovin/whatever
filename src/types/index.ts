@@ -13,6 +13,9 @@ export interface LocalizedString {
   en: string;
   uk?: string;
   ro?: string;
+  pl?: string;
+  de?: string;
+  fr?: string;
 }
 
 /**

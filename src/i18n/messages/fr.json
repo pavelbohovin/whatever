@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "build": "Créer",
+    "marketplace": "Marché",
+    "settings": "Paramètres",
+    "brand": "Whatever"
+  },
+  "home": {
+    "welcome": "Bienvenue",
+    "welcomeUser": "Bienvenue, {name} !",
+    "subtitle": "Votre super application personnelle. Créez des mini-apps ou utilisez les modules ci-dessous.",
+    "myApps": "Vos mini-apps",
+    "getStarted": "Commencer",
+    "buildTitle": "Créer",
+    "buildDesc": "Créez votre propre mini-app",
+    "marketplaceTitle": "Marché",
+    "marketplaceDesc": "Parcourir les modèles",
+    "modules": "Modules",
+    "comingSoon": "Bientôt disponible",
+    "moduleNames": {
+      "banking": "Banque",
+      "messenger": "Messagerie",
+      "videos": "Vidéos",
+      "food": "Alimentation",
+      "health": "Santé",
+      "accounting": "Comptabilité",
+      "work": "Travail",
+      "books": "Livres",
+      "travel": "Voyages",
+      "reminder": "Rappel",
+      "investing": "Investissement",
+      "games": "Jeux",
+      "translator": "Traducteur"
+    }
+  },
+  "build": {
+    "title": "Créer une mini-app",
+    "stepBasics": "Bases",
+    "stepData": "Données",
+    "stepPublish": "Publier",
+    "name": "Nom",
+    "namePlaceholder": "Mon suivi de dépenses",
+    "icon": "Icône (emoji)",
+    "description": "Description",
+    "descriptionPlaceholder": "Suivez vos dépenses...",
+    "tableInstruction": "Ajoutez au moins une table avec des champs. Pour le MVP, nous utilisons la première table.",
+    "tableName": "Nom de la table",
+    "tableNamePlaceholder": "Dépenses",
+    "fields": "Champs",
+    "fieldNamePlaceholder": "montant",
+    "typeText": "Texte",
+    "typeNumber": "Nombre",
+    "typeBoolean": "Booléen",
+    "typeDate": "Date",
+    "addFieldBtn": "Ajouter",
+    "addTableBtn": "Ajouter une table",
+    "tableAdded": "Table \"{name}\" ajoutée",
+    "publishDesc": "Vous obtiendrez : Page liste, Page formulaire, Page détail. Prêt à publier ?",
+    "publishBtn": "Publier et lancer",
+    "back": "← Retour",
+    "next": "Suivant →"
+  },
+  "marketplace": {
+    "title": "Marché",
+    "subtitle": "Commencez avec un modèle. Un clic pour installer.",
+    "install": "Installer",
+    "comingSoon": "Bientôt disponible",
+    "comingSoonAlert": "Ce modèle arrive bientôt ! Essayez le Suivi de dépenses ou le Suivi d'habitudes.",
+    "templates": {
+      "expense": {
+        "name": "Suivi de dépenses",
+        "desc": "Suivez vos dépenses quotidiennes"
+      },
+      "habit": {
+        "name": "Suivi d'habitudes",
+        "desc": "Suivez vos habitudes et séries"
+      },
+      "books": {
+        "name": "Notes de livres",
+        "desc": "Notes et résumés IA"
+      },
+      "travel": {
+        "name": "Planificateur de voyage",
+        "desc": "Planifiez vos voyages"
+      },
+      "translator": {
+        "name": "Traducteur",
+        "desc": "Phrasebook + traduction"
+      },
+      "inbox": {
+        "name": "Assistant boîte de réception",
+        "desc": "Rappels + tri"
+      }
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "name": "Nom",
+    "save": "Enregistrer",
+    "aiProviders": "Fournisseurs IA",
+    "aiProvidersDesc": "Ajoutez votre clé API OpenAI ou Anthropic pour activer les actions IA dans les mini-apps. Les clés sont stockées localement et ne sont jamais envoyées à nos serveurs.",
+    "apiKeyPlaceholder": "sk-...",
+    "saveKey": "Enregistrer la clé",
+    "keySaved": "Clé enregistrée.",
+    "integrations": "Intégrations",
+    "integrationsDesc": "Calendrier, Connecteur HTTP — bientôt disponible.",
+    "language": "Langue",
+    "languageDesc": "Choisissez votre langue préférée. Les modifications prennent effet immédiatement."
+  },
+  "run": {
+    "home": "← Accueil",
+    "notFound": "Mini-app introuvable.",
+    "backHome": "← Retour à l'accueil",
+    "noRecord": "Aucun enregistrement",
+    "chatHint": "Discutez avec l'IA (connectez votre clé LLM dans les paramètres)",
+    "selectPlaceholder": "Sélectionner..."
+  },
+  "common": {
+    "save": "Enregistrer",
+    "add": "Ajouter",
+    "back": "Retour",
+    "next": "Suivant",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement...",
+    "error": "Quelque chose s'est mal passé."
+  }
+}
