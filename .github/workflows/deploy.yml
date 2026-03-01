@@ -48,8 +48,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             PM2=/home/pavel/.nvm/versions/node/v22.22.0/bin/pm2
+            NODE=/home/pavel/.nvm/versions/node/v22.22.0/bin/node
             cd /var/www/whatever.developer-pro.com
             $PM2 describe whatever > /dev/null 2>&1 \
               && $PM2 restart whatever \
-              || $PM2 start node_modules/.bin/next --name whatever -- start -p 3001
+              || $PM2 start $NODE --name whatever -- node_modules/.bin/next start -p 3001
             $PM2 save
