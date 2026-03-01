@@ -20,7 +20,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --omit=dev
 
       - name: Build
         run: npm run build
@@ -28,7 +28,7 @@ jobs:
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avz --delete --exclude='.git' --exclude='node_modules'
+          switches: -avz --delete --exclude='.git'
           path: ./
           remote_path: /var/www/whatever.developer-pro.com/
           remote_host: ${{ secrets.SSH_HOST }}
@@ -43,4 +43,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: /usr/bin/env bash -i -c 'pm2 restart whatever'
+          script: |
+            cd /var/www/whatever.developer-pro.com
+            pm2 describe whatever > /dev/null 2>&1 \
+              && pm2 restart whatever \
+              || pm2 start node_modules/.bin/next --name whatever -- start -p 3001
+            pm2 save
