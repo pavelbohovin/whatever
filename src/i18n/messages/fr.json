@@ -111,6 +111,7 @@
   },
   "run": {
     "home": "← Accueil",
+    "loading": "Chargement...",
     "notFound": "Mini-app introuvable.",
     "backHome": "← Retour à l'accueil",
     "noRecord": "Aucun enregistrement",

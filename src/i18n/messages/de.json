@@ -111,6 +111,7 @@
   },
   "run": {
     "home": "← Startseite",
+    "loading": "Laden...",
     "notFound": "Mini-App nicht gefunden.",
     "backHome": "← Zurück zur Startseite",
     "noRecord": "Kein Eintrag",

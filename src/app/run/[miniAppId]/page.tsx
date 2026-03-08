@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useApp } from '@/context/AppContext';
 import { useLanguage } from '@/context/LanguageContext';
-import { createPersistence } from '@/lib/db/client';
 import { DSLRenderer } from '@/lib/dsl/renderer';
 import { runWorkflow } from '@/lib/workflow/engine';
 import type { MiniApp, Page, DataRecord } from '@/types';
@@ -23,7 +22,7 @@ export default function RunPage() {
   const [records, setRecords] = useState<DataRecord[]>([]);
   const [currentRecord, setCurrentRecord] = useState<DataRecord | null>(null);
   const [pageId, setPageId] = useState<string>('list');
-  const db = createPersistence();
+  const { db } = useApp();
 
   const miniAppId = params.miniAppId as string;
 
@@ -38,13 +37,13 @@ export default function RunPage() {
   }, [miniAppId, miniApps, pageId]);
 
   useEffect(() => {
-    if (!app || !page?.tableId) return;
+    if (!db || !app || !page?.tableId) return;
     db.getRecords(page.tableId).then(setRecords);
-  }, [app, page?.tableId]);
+  }, [db, app, page?.tableId]);
 
   const handleNavigate = useCallback(
     (toPageId: string, recordId?: string) => {
-      if (!app) return;
+      if (!app || !db) return;
       const p = app.pages.find((x) => x.id === toPageId);
       setPage(p ?? null);
       setPageId(toPageId);
@@ -54,12 +53,12 @@ export default function RunPage() {
         setCurrentRecord(null);
       }
     },
-    [app]
+    [app, db]
   );
 
   const handleSaveRecord = useCallback(
     async (tableId: string, data: Record<string, unknown>) => {
-      if (!app) return;
+      if (!app || !db) return;
       const form = document.querySelector('form');
       const inputs = form?.querySelectorAll('[data-field]');
       const collected: Record<string, unknown> = { ...data };
@@ -95,8 +94,16 @@ export default function RunPage() {
       }
       handleNavigate('list');
     },
-    [app, user, handleNavigate]
+    [app, user, handleNavigate, db]
   );
+
+  if (!db) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-gray-500">{t('loading')}</p>
+      </div>
+    );
+  }
 
   if (!app) {
     return (

@@ -111,6 +111,7 @@
   },
   "run": {
     "home": "← Strona główna",
+    "loading": "Ładowanie...",
     "notFound": "Mini-aplikacja nie znaleziona.",
     "backHome": "← Wróć do strony głównej",
     "noRecord": "Brak rekordu",

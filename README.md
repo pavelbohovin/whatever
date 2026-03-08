@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - **Runtime**: Render Form, List, Detail pages from JSON DSL
 - **Workflow engine**: Triggers (manual, data_change), Actions (create/update record, LLM)
 - **LLM**: Add OpenAI key in Settings; use in workflows
-- **Persistence**: Local storage (IndexedDB/SQLite later)
+- **Persistence**: SQLite via sql.js (browser), persisted to IndexedDB
 
 ## Docs
 
@@ -45,7 +45,7 @@ src/
 
 ## Next Steps
 
-- [ ] sql.js for full SQLite in browser
+- [x] sql.js for full SQLite in browser
 - [ ] Encrypt API keys (Web Crypto)
 - [ ] Calendar integration
 - [ ] HTTP Connector

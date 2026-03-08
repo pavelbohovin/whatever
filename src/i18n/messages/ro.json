@@ -111,6 +111,7 @@
   },
   "run": {
     "home": "← Acasă",
+    "loading": "Se încarcă...",
     "notFound": "Mini-aplicația nu a fost găsită.",
     "backHome": "← Înapoi acasă",
     "noRecord": "Nicio înregistrare",

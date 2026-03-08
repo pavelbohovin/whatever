@@ -111,6 +111,7 @@
   },
   "run": {
     "home": "← Home",
+    "loading": "Loading...",
     "notFound": "Mini-app not found.",
     "backHome": "← Back to Home",
     "noRecord": "No record",

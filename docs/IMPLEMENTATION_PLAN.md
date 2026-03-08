@@ -6,7 +6,7 @@
 - [x] Next.js project setup (App Router, TypeScript)
 - [x] Folder structure + design system (Tailwind)
 - [x] Types: User, MiniApp, Page, Component, Workflow, etc.
-- [x] Persistence: SQLite via sql.js (browser) or better-sqlite3 (Node)
+- [x] Persistence: SQLite via sql.js (browser), persisted to IndexedDB
 - [x] Shell: Home layout, nav, placeholder modules
 - [x] Auth: Local user (name only), no cloud yet
 

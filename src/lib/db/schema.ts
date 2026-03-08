@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS users (
   name TEXT NOT NULL,
   avatar_url TEXT,
   created_at TEXT NOT NULL,
-  cloud_id TEXT
+  cloud_id TEXT,
+  language TEXT
 );
 
 -- Provider keys (encrypted ref only)

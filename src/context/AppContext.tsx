@@ -2,11 +2,14 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import type { User, MiniApp } from '@/types';
-import { createPersistence } from '@/lib/db/client';
+import type { PersistenceLayer } from '@/lib/db/client';
+import { getPersistence } from '@/lib/db/client';
 
 interface AppContextValue {
   user: User | null;
   miniApps: MiniApp[];
+  db: PersistenceLayer | null;
+  ready: boolean;
   setUser: (u: User | null) => void;
   addMiniApp: (app: MiniApp) => void;
   removeMiniApp: (id: string) => void;
@@ -18,9 +21,10 @@ const AppContext = createContext<AppContextValue | null>(null);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUserState] = useState<User | null>(null);
   const [miniApps, setMiniApps] = useState<MiniApp[]>([]);
-  const [db] = useState(() => createPersistence());
+  const [db, setDb] = useState<PersistenceLayer | null>(null);
 
   const refresh = async () => {
+    if (!db) return;
     const u = await db.getUser();
     const apps = await db.getMiniApps();
     setUserState(u);
@@ -28,15 +32,20 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    refresh();
+    getPersistence().then(setDb);
   }, []);
+
+  useEffect(() => {
+    if (db) refresh();
+  }, [db]);
 
   const setUser = (u: User | null) => {
     setUserState(u);
-    if (u) db.saveUser(u);
+    if (u && db) db.saveUser(u);
   };
 
   const addMiniApp = async (app: MiniApp) => {
+    if (!db) return;
     await db.saveMiniApp(app);
     setMiniApps((prev) => {
       const idx = prev.findIndex((a) => a.id === app.id);
@@ -48,6 +57,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeMiniApp = async (id: string) => {
+    if (!db) return;
     await db.deleteMiniApp(id);
     setMiniApps((prev) => prev.filter((a) => a.id !== id));
   };
@@ -57,6 +67,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       value={{
         user,
         miniApps,
+        db,
+        ready: db !== null,
         setUser,
         addMiniApp,
         removeMiniApp,
