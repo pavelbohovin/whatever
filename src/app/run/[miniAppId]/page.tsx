@@ -129,7 +129,7 @@ export default function RunPage() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <Link href="/" className="text-gray-600 hover:text-whatever-primary">
+        <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-whatever-primary">
           {t('home')}
         </Link>
         <h1 className="text-xl font-bold">
@@ -144,7 +144,7 @@ export default function RunPage() {
             key={p.id}
             onClick={() => handleNavigate(p.id)}
             className={`px-4 py-2 rounded-lg ${
-              pageId === p.id ? 'bg-whatever-primary text-white' : 'bg-gray-200'
+              pageId === p.id ? 'bg-whatever-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
             }`}
           >
             {localizeString(p.name, locale)}
@@ -160,7 +160,7 @@ export default function RunPage() {
               handleSaveRecord(page.tableId, {});
             }
           }}
-          className="bg-white rounded-xl p-6 shadow-sm"
+          className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm"
         >
           {page.components.map((c) => (
             <DSLRenderer key={c.id} component={c} context={renderContext} />

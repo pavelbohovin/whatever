@@ -96,6 +96,13 @@
   },
   "settings": {
     "title": "Setări",
+    "theme": "Temă",
+    "themeDesc": "Alege luminos, întunecat sau urmează preferința sistemului.",
+    "themeOptions": {
+      "system": "Sistem",
+      "light": "Luminos",
+      "dark": "Întunecat"
+    },
     "profile": "Profil",
     "name": "Nume",
     "save": "Salvează",

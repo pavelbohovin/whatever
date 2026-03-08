@@ -85,7 +85,7 @@ export function DSLRenderer({
   switch (component.type) {
     case 'Text':
       return (
-        <p className="text-gray-800">
+        <p className="text-gray-800 dark:text-gray-200">
           {resolve(component.props.content ?? '')}
         </p>
       );
@@ -107,14 +107,14 @@ export function DSLRenderer({
     case 'Input':
       return (
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {resolve(component.props.label ?? component.props.field)}
           </label>
           <input
             type={(component.props.inputType as string) ?? 'text'}
             placeholder={resolve(component.props.placeholder ?? '')}
             defaultValue={context.record?.data?.[component.props.field as string] as string}
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             data-field={component.props.field}
           />
         </div>
@@ -124,12 +124,12 @@ export function DSLRenderer({
       const locale = context.locale ?? DEFAULT_LOCALE;
       return (
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {resolve(component.props.label ?? component.props.field)}
           </label>
           <select
             defaultValue={context.record?.data?.[component.props.field as string] as string}
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             data-field={component.props.field}
           >
             <option value="">
@@ -150,9 +150,9 @@ export function DSLRenderer({
             type="checkbox"
             defaultChecked={context.record?.data?.[component.props.field as string] as boolean}
             data-field={component.props.field}
-            className="rounded"
+            className="rounded accent-whatever-primary"
           />
-          <label className="text-sm text-gray-700">{resolve(component.props.label ?? '')}</label>
+          <label className="text-sm text-gray-700 dark:text-gray-300">{resolve(component.props.label ?? '')}</label>
         </div>
       );
 
@@ -164,7 +164,7 @@ export function DSLRenderer({
           {records.map((rec) => (
             <div
               key={rec.id}
-              className="p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
+              className="p-3 border border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700"
               onClick={() => {
                 const navAction = component.actions?.find((a) => a.type === 'navigate');
                 if (navAction?.pageId) {
@@ -185,12 +185,12 @@ export function DSLRenderer({
 
     case 'Card':
       return (
-        <div className="border rounded-lg p-4 shadow-sm">
+        <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-4 shadow-sm">
           {component.props.title ? (
             <h3 className="font-semibold text-lg mb-2">{resolve(component.props.title)}</h3>
           ) : null}
           {component.props.subtitle ? (
-            <p className="text-sm text-gray-500 mb-3">{resolve(component.props.subtitle)}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{resolve(component.props.subtitle)}</p>
           ) : null}
           {component.children?.map((c) => (
             <DSLRenderer key={c.id} component={c} context={context} />
@@ -201,12 +201,12 @@ export function DSLRenderer({
     case 'RecordDetail': {
       const rec = context.record;
       const locale = context.locale ?? DEFAULT_LOCALE;
-      if (!rec) return <p className="text-gray-500">{locale === 'uk' ? 'Запис відсутній' : locale === 'ro' ? 'Nicio înregistrare' : 'No record'}</p>;
+      if (!rec) return <p className="text-gray-500 dark:text-gray-400">{locale === 'uk' ? 'Запис відсутній' : locale === 'ro' ? 'Nicio înregistrare' : 'No record'}</p>;
       return (
         <div className="space-y-2">
           {Object.entries(rec.data).map(([k, v]) => (
             <div key={k}>
-              <span className="font-medium text-gray-600">{k}:</span>{' '}
+              <span className="font-medium text-gray-600 dark:text-gray-400">{k}:</span>{' '}
               {String(v ?? '-')}
             </div>
           ))}
@@ -217,8 +217,8 @@ export function DSLRenderer({
     case 'Chat': {
       const locale = context.locale ?? DEFAULT_LOCALE;
       return (
-        <div className="border rounded-lg p-4 min-h-[200px]">
-          <p className="text-gray-500 text-sm">
+        <div className="border border-gray-200 dark:border-gray-600 rounded-lg p-4 min-h-[200px]">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             {locale === 'uk'
               ? 'Чат із ШІ (додайте ключ LLM у Налаштуваннях)'
               : locale === 'ro'
@@ -231,7 +231,7 @@ export function DSLRenderer({
 
     case 'Chart':
       return (
-        <div className="h-32 flex items-center justify-center border rounded bg-gray-50 text-gray-500">
+        <div className="h-32 flex items-center justify-center border border-gray-200 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
           Chart: {(component.props.type as string) ?? 'bar'}
         </div>
       );

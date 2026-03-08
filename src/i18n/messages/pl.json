@@ -96,6 +96,13 @@
   },
   "settings": {
     "title": "Ustawienia",
+    "theme": "Motyw",
+    "themeDesc": "Wybierz jasny, ciemny lub zgodny z ustawieniami systemu.",
+    "themeOptions": {
+      "system": "System",
+      "light": "Jasny",
+      "dark": "Ciemny"
+    },
     "profile": "Profil",
     "name": "Nazwa",
     "save": "Zapisz",

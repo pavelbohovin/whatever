@@ -41,24 +41,24 @@ export default function MarketplacePage() {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-2">{t('title')}</h1>
-      <p className="text-gray-600 mb-8">{t('subtitle')}</p>
+      <p className="text-gray-600 dark:text-gray-400 mb-8">{t('subtitle')}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {TEMPLATE_IDS.map((id) => {
           const meta = TEMPLATE_META[id];
           return (
             <div
               key={id}
-              className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+              className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition"
             >
               <span className="text-4xl block mb-3">{meta.icon}</span>
               <h3 className="font-bold text-lg mb-1">{t(`templates.${id}.name`)}</h3>
-              <p className="text-gray-600 text-sm mb-4">{t(`templates.${id}.desc`)}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{t(`templates.${id}.desc`)}</p>
               <button
                 onClick={() => install(id)}
                 className={`w-full py-2 rounded-lg font-medium ${
                   meta.template
                     ? 'bg-whatever-primary text-white hover:opacity-90'
-                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed'
                 }`}
               >
                 {meta.template ? t('install') : t('comingSoon')}

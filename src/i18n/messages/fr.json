@@ -96,6 +96,13 @@
   },
   "settings": {
     "title": "Paramètres",
+    "theme": "Thème",
+    "themeDesc": "Choisissez clair, sombre ou suivez les préférences du système.",
+    "themeOptions": {
+      "system": "Système",
+      "light": "Clair",
+      "dark": "Sombre"
+    },
     "profile": "Profil",
     "name": "Nom",
     "save": "Enregistrer",

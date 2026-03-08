@@ -32,7 +32,7 @@ export default function HomePage() {
       <h1 className="text-2xl font-bold mb-2">
         {user?.name ? t('welcomeUser', { name: user.name }) : t('welcome')}
       </h1>
-      <p className="text-gray-600 mb-8">{t('subtitle')}</p>
+      <p className="text-gray-600 dark:text-gray-400 mb-8">{t('subtitle')}</p>
 
       {miniApps.length > 0 && (
         <section className="mb-10">
@@ -42,7 +42,7 @@ export default function HomePage() {
               <Link
                 key={app.id}
                 href={`/run/${app.id}`}
-                className="flex flex-col items-center justify-center p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition"
+                className="flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition"
               >
                 <span className="text-3xl mb-2">{app.icon}</span>
                 <span className="font-medium text-center">
@@ -69,12 +69,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/marketplace"
-            className="flex items-center gap-4 p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition"
+            className="flex items-center gap-4 p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-md transition"
           >
             <span className="text-4xl">📦</span>
             <div>
               <h3 className="font-bold text-lg">{t('marketplaceTitle')}</h3>
-              <p className="text-gray-600 text-sm">{t('marketplaceDesc')}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{t('marketplaceDesc')}</p>
             </div>
           </Link>
         </div>
@@ -86,11 +86,11 @@ export default function HomePage() {
           {MODULE_IDS.map((m) => (
             <div
               key={m.id}
-              className="flex flex-col items-center justify-center p-4 bg-white border rounded-lg opacity-75"
+              className="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg opacity-75"
             >
               <span className="text-2xl mb-1">{m.icon}</span>
-              <span className="text-sm text-gray-600">{t(`moduleNames.${m.id}`)}</span>
-              <span className="text-xs text-gray-400">{t('comingSoon')}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-400">{t(`moduleNames.${m.id}`)}</span>
+              <span className="text-xs text-gray-400 dark:text-gray-500">{t('comingSoon')}</span>
             </div>
           ))}
         </div>

@@ -4,12 +4,21 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useApp } from '@/context/AppContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
+import type { Theme } from '@/context/ThemeContext';
 import { LOCALES, LOCALE_LABELS } from '@/i18n/config';
 import type { Locale } from '@/i18n/config';
+
+const THEMES: { id: Theme; icon: string }[] = [
+  { id: 'system', icon: '💻' },
+  { id: 'light', icon: '☀️' },
+  { id: 'dark', icon: '🌙' },
+];
 
 export default function SettingsPage() {
   const { user, setUser } = useApp();
   const { locale, setLocale } = useLanguage();
+  const { theme, setTheme } = useTheme();
   const t = useTranslations('settings');
   const [name, setName] = useState(user?.name ?? '');
   const [apiKey, setApiKey] = useState('');
@@ -52,7 +61,7 @@ export default function SettingsPage() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <button
@@ -64,16 +73,37 @@ export default function SettingsPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-lg font-semibold mb-4">{t('theme')}</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{t('themeDesc')}</p>
+        <div className="flex gap-3">
+          {THEMES.map(({ id, icon }) => (
+            <button
+              key={id}
+              onClick={() => setTheme(id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition ${
+                theme === id
+                  ? 'bg-whatever-primary text-white'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              <span>{icon}</span>
+              <span>{t(`themeOptions.${id}`)}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-semibold mb-4">{t('language')}</h2>
-        <p className="text-sm text-gray-600 mb-3">{t('languageDesc')}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{t('languageDesc')}</p>
         <div className="flex flex-col gap-2">
           {LOCALES.map((loc) => (
             <label
               key={loc}
               className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition ${
                 locale === loc
-                  ? 'border-whatever-primary bg-whatever-primary/5'
-                  : 'border-gray-200 hover:border-gray-300'
+                  ? 'border-whatever-primary bg-whatever-primary/5 dark:bg-whatever-primary/20'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
               }`}
             >
               <input
@@ -98,7 +128,7 @@ export default function SettingsPage() {
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
           placeholder={t('apiKeyPlaceholder')}
-          className="w-full border rounded-lg px-3 py-2 mb-2"
+          className="w-full border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 mb-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         />
         <button
           onClick={saveApiKey}
@@ -112,7 +142,7 @@ export default function SettingsPage() {
 
       <section>
         <h2 className="text-lg font-semibold mb-4">{t('integrations')}</h2>
-        <p className="text-gray-500 text-sm">{t('integrationsDesc')}</p>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">{t('integrationsDesc')}</p>
       </section>
     </div>
   );

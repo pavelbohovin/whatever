@@ -96,6 +96,13 @@
   },
   "settings": {
     "title": "Einstellungen",
+    "theme": "Design",
+    "themeDesc": "Wähle hell, dunkel oder folge der Systemeinstellung.",
+    "themeOptions": {
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
+    },
     "profile": "Profil",
     "name": "Name",
     "save": "Speichern",
